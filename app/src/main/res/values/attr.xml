@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ParallaxView">
+        <attr name="speed" format="dimension"/>
+        <attr name="src" format="reference"/>
+        <attr name="sceneLength" format="integer"/>
+        <attr name="randomness" format="reference"/>
+        <attr name="initialState" format="enum">
+            <enum name="started" value="0"/>
+            <enum name="stopped" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="shape" format="integer"/>
+
+        <attr name="border" format="boolean"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="rect_roundcorner" format="dimension"/>
+
+        <attr name="shadow" format="boolean"/>
+        <attr name="shadow_width" format="dimension"/>
+        <attr name="shadow_color_star" format="color"/>
+        <attr name="shadow_color_midd" format="color"/>
+        <attr name="shadow_color_end" format="color"/>
+
+    </declare-styleable>
+    <declare-styleable name="StepView">
+        <attr name="step_size" format="dimension"/><!--step的size，也就是image的大小-->
+        <attr name="line_size" format="dimension"/><!--线宽-->
+        <attr name="text_size" format="dimension"/><!--文字大小-->
+        <attr name="text_line_margin" format="dimension"/><!--文字和线之间的间距-->
+        <attr name="normal_line_color" format="color"/><!--一般线的颜色-->
+        <attr name="normal_text_color" format="color"/><!--一般文字的颜色-->
+        <attr name="target_text_color" format="color"/><!--一般文字的颜色-->
+        <attr name="passed_line_color" format="color"/><!--已经过线的颜色-->
+        <attr name="step_count" format="integer"/><!--总step数-->
+        <attr name="current_step" format="integer"/><!--当前step位置-->
+        <attr name="normal_step_iv" format="reference"/><!--一般图片-->
+        <attr name="passed_step_iv" format="reference"/><!--已经过的图片-->
+        <attr name="target_step_iv" format="reference"/><!--当前step图片-->
+        <attr name="step_is_touch" format="boolean"/><!--step是否可点-->
+        <attr name="text_up_line" format="boolean"/><!--文字是否在线上-->
+    </declare-styleable>
+</resources>

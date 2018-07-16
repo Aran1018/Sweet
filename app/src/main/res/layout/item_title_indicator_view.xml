@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_dishes_title"
+        android:layout_width="@dimen/dimen_60_dp"
+        android:layout_height="@dimen/dimen_50_dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:gravity="center|bottom"
+        android:text="菜品"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/tv_dishes_over"
+        android:layout_width="@dimen/dimen_60_dp"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@+id/tv_dishes_title"
+        android:gravity="bottom|center"
+        android:text="环境"/>
+
+    <TextView
+        android:id="@+id/tv_other"
+        android:layout_width="@dimen/dimen_60_dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/tv_dishes_over"
+        android:layout_toEndOf="@+id/tv_dishes_over"
+        android:gravity="bottom|center"
+        android:text="其它"/>
+</RelativeLayout>

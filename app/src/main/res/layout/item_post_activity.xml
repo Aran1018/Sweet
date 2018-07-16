@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="95dp"
+    android:layout_height="95dp"
+    android:descendantFocusability="afterDescendants"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal">
+
+    <ImageView
+        android:layout_margin="5dp"
+        android:id="@+id/imv_circle_item"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:scaleType="centerCrop"/>
+
+    <ImageButton
+        android:id="@+id/imb_delete"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:background="@mipmap/delete"/>
+</RelativeLayout>

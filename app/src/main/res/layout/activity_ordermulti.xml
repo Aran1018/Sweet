@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title"/>
+
+    <TextView
+        android:id="@+id/tv_room_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edt_create_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入房间密码"/>
+
+    <Button
+        android:id="@+id/btn_create_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建房间"/>
+
+    <EditText
+        android:id="@+id/edt_join_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="房间号"/>
+
+    <EditText
+        android:id="@+id/edt_join_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入密码"/>
+
+    <Button
+        android:id="@+id/btn_join_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加入房间"/>
+
+</LinearLayout>

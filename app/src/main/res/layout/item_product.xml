@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainitem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_productInfo"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@mipmap/test_product"
+                android:id="@+id/head"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="臊子面"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="评论数：500"
+                    android:textSize="10dp"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textStyle="bold"
+                        android:textColor="@color/Myappcolor"
+                        android:textSize="@dimen/dimen_13_dp" />
+
+                    <TextView
+                        android:id="@+id/tv_prise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_5_dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/Myappcolor"
+                        android:textSize="@dimen/dimen_13_dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/件"
+                        android:textStyle="bold"
+                        android:textColor="@color/Myappcolor"
+                        android:textSize="@dimen/dimen_13_dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shape_round">
+                    <TextView
+                        android:id="@+id/reduce"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textSize="12dp"
+                        android:layout_marginBottom="1dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/shoppingNum"
+                    android:layout_width="25dp"
+                    android:layout_height="18dp"
+                    android:enabled="false"
+                    android:background="@drawable/shape_productnum_bg"
+                    android:gravity="center_vertical|center"
+                    android:maxLength="10"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_14_dp" />
+
+                <LinearLayout
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/shape_round">
+                    <TextView
+                        android:id="@+id/increase"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textSize="12dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

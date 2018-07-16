@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/qrFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+        <SurfaceView
+            android:id="@+id/mo_scanner_preview_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            />
+     <com.lucky.sweet.model.qrcodescan.view.ViewfinderView
+        android:id="@+id/mo_scanner_viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/view_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/mo_scanner_back"
+                    android:onClick="onButtonClick"
+                    android:layout_width="10dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/selector_btn_titlebackblack"/>
+
+                <TextView
+                    android:id="@+id/mo_scanner_title"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="扫一扫"
+                    android:textColor="@color/white"
+                    android:textSize="21dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/mo_scanner_photo"
+                    android:layout_width="10px"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:onClick="onButtonClick"
+                    android:textSize="18dp"
+                    android:text="相册"/>
+            </LinearLayout>
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/mo_scanner_light"
+            android:onClick="onButtonClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开照明灯"
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="400dp"/>
+        </LinearLayout>
+
+
+    </FrameLayout>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+    <TextView
+        android:id="@+id/item_mainx_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="测试文字"
+        android:textSize="15dp"
+        />
+    <!--分割线-->
+    <TextView
+        android:id="@+id/main_tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#edecec"/>
+</LinearLayout>

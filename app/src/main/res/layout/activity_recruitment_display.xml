@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.lucky.sweet.activity.RecruitmentDisplayActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.lucky.sweet.views.TitleIndicatorView
+            android:id="@+id/titie_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_back_store"
+            android:layout_width="@dimen/dimen_35_dp"
+            android:layout_height="@dimen/dimen_35_dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="@dimen/dimen_19_dp"
+            android:background="@mipmap/down"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/dimen_21_dp"
+        android:paddingRight="@dimen/dimen_21_dp"
+        android:scrollbars="none">
+
+        <com.lucky.sweet.views.PictureDisplayLayout
+            android:id="@+id/ll_cover_photo_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </com.lucky.sweet.views.PictureDisplayLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

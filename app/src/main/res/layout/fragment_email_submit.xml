@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lucky.sweet.fragment.EmailSubmitFragment">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/ic_user"/>
+
+        <EditText
+            android:id="@+id/edt_userEmail"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:hint="请输入邮箱账号"
+            android:paddingLeft="45dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14dp"/>
+
+        <Button
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/clear_content"
+            android:id="@+id/btn_delete"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/ic_pwd"/>
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/edt_verPassword"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_edittext_normal"
+            android:hint="请输入验证码"
+            android:inputType="text"
+            android:maxLength="5"
+            android:paddingLeft="45dp"
+            android:singleLine="true"
+            android:textColorHint="@color/white"
+            android:textSize="14dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="8dp"
+            android:id="@+id/btn_verCode"
+            android:background="@color/transparent"
+
+            android:text="获取验证码"
+            android:textColor="@color/white"/>
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_nextStep"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shape_btn_login"
+        android:clickable="true"
+        android:text="下一步"
+        android:textSize="15dp"/>
+</LinearLayout>

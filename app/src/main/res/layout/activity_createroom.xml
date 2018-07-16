@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@mipmap/theme_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:onClick="addRoom"
+                    android:background="@mipmap/add_room"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加入房间"
+                    android:textSize="14dp"
+                    android:layout_marginTop="2dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/create_room"
+            android:onClick="submitCreate"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建房间"
+            android:layout_marginTop="2dp"
+
+            />
+        </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:background="@drawable/shape_level_bg">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:text="温馨提示：输入房间密码后，将分配您房间号码，把号码告诉你的好朋友，就可以加入您的房间与您一起点餐了哦！"-->
+            <!--android:textColor="@color/Myappcolor"-->
+            <!--android:textSize="14dp" />-->
+    <!--</LinearLayout>-->
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dimen_0_dp"-->
+        <!--android:layout_weight="1.8"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+
+
+
+
+
+
+        <!--<Button-->
+        <!--android:layout_width="@dimen/dimen_280_dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_btn_order"-->
+        <!--android:onClick="cancelCreate"-->
+        <!--android:text="取消订单"-->
+        <!--android:textColor="@color/white" />-->
+    <!--</LinearLayout>-->
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="342dp">
+        <android.support.v7.widget.CardView
+            android:id="@+id/sc_view"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            app:cardElevation="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_circle_bg">
+                <EditText
+                    android:layout_weight="4.5"
+                    android:id="@+id/edt_search_user"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:hint="搜索你的朋友名吧"
+                    android:textSize="15dp"
+                    android:background="@null"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/btn_user_search"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@mipmap/search_user"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_search_detailed_user_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_10dp"
+                />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+        <com.lucky.sweet.views.HorizontalListView
+            android:id="@+id/lv_add_friend"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="@dimen/dimen_15_dp"
+            android:layout_marginRight="@dimen/dimen_15_dp"
+            android:layout_marginLeft="@dimen/dimen_15_dp"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/cdl_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/theme_bg">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@mipmap/theme_bg">
+
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:fitsSystemWindows="true"
+                app:contentScrim="#499607"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="60dp"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_position" />
+
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="3dp"
+                            android:text="大连"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_qrcodescan"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:background="@mipmap/qrcodescan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="扫一扫点菜"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingRight="4dp">
+
+                        <ImageView
+                            android:id="@+id/imv_weather"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:src="@mipmap/ic_cloud" />
+
+                        <TextView
+                            android:id="@+id/tv_weathertype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="多云"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    <com.lucky.sweet.views.MySearchView
+                        android:id="@+id/msv_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:paddingRight="15dp" />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/white"
+                    android:clipChildren="false">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:clipChildren="false"
+                        android:orientation="horizontal"
+                        android:background="@mipmap/photo_null_bg"
+                        android:overScrollMode="never">
+
+                    </android.support.v4.view.ViewPager>
+
+                    <com.lucky.sweet.views.IndicatorView
+                        android:id="@+id/in_vp_ad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/gray0" />
+
+
+                <!--<include-->
+                <!--android:id="@+id/item_food"-->
+                <!--layout="@layout/item_store_show"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:text="美食"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_moreFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center"
+                            android:onClick="onButtonClick"
+                            android:text="查看更多"
+                            android:textColor="@color/Myappcolor"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+              <!--      <com.lucky.sweet.widgets.dragload.RecycleViewRefresh
+                        android:id="@+id/ref_recy_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">-->
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rec_foodStore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:clipChildren="false"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"/>
+
+    <!--                    <include
+                            layout="@layout/pull_to_refresh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </com.lucky.sweet.widgets.dragload.RecycleViewRefresh>
+-->
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/gray0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_relaxCate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:text="休闲"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_moreRelax"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center"
+                            android:onClick="onButtonClick"
+                            android:text="查看更多"
+                            android:textColor="@color/Myappcolor"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+     <!--               <com.lucky.sweet.widgets.dragload.RecycleViewRefresh
+                        android:id="@+id/ref_recy_fun"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">-->
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rec_funStore"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:clipChildren="false"/>
+<!--
+                        <ProgressBar
+                            android:id="@+id/pb_fun_loading"
+                            android:layout_width="@dimen/dimen_20_dp"
+                            android:layout_height="@dimen/dimen_20_dp"
+                            android:layout_gravity="center_vertical" />
+                    </com.lucky.sweet.widgets.dragload.RecycleViewRefresh>-->
+                </LinearLayout>
+
+                <!--<include-->
+                <!--android:id="@+id/item_relax"-->
+                <!--layout="@layout/item_store_show"/>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/gray0" />
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_store_method"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/imb_istore_searchroom"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="49dp"
+            android:layout_toStartOf="@+id/imb_istore_waitorder"
+            android:background="@mipmap/enter_room" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imb_istore_searchroom"
+            android:layout_below="@+id/imb_istore_searchroom"
+            android:layout_marginTop="13dp"
+            android:text="搜索房间" />
+
+        <Button
+            android:id="@+id/imb_istore_waitorder"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/imb_istore_searchroom"
+            android:layout_marginEnd="108dp"
+            android:background="@mipmap/wait_order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toEndOf="@+id/imb_istore_searchroom"
+            android:text="等待订单" />
+
+    </RelativeLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/float_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_gravity="right|bottom"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginBottom="15dp"-->
+        <!--app:elevation="20dp"-->
+        <!--app:fabSize="mini"-->
+        <!--app:pressedTranslationZ="22dp"-->
+        <!--app:rippleColor="#ff0"/>-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/float_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20.0dip"
+        android:onClick="click"
+        android:src="@mipmap/floatbtn_bg"
+        app:backgroundTint="#3ABA47"
+        app:borderWidth="0.0dip"
+        app:elevation="5.0dip"
+        app:fabSize="mini"
+        app:layout_anchor="@id/container"
+        app:layout_anchorGravity="right|bottom"
+        app:pressedTranslationZ="10.0dip"
+        app:rippleColor="#a6a6a6"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

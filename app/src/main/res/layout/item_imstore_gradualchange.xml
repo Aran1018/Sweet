@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e6e7"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_contact"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+
+    <com.lucky.sweet.views.MySearchView
+        android:id="@+id/msv_mysearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- <ImageView
+         android:layout_width="12dp"
+         android:layout_height="12dp"
+         android:layout_below="@id/msv_mysearch"
+         android:layout_marginLeft="100dp"
+         android:clickable="false"
+         android:focusable="false"
+         android:src="@mipmap/ic_search"/>
+
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:layout_alignParentStart="true"
+         android:layout_below="@+id/msv_mysearch"
+         android:background="@drawable/shape_search_bg"
+         android:gravity="center"
+         android:hint="在SWEET上搜索"
+         android:maxLines="1"/>
+ -->
+</LinearLayout>

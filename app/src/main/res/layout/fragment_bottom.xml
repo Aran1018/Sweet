@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="3dp"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_order_des_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="亲子饭"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="描述: "
+            android:textColor="@color/black"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:singleLine="true"
+            android:text="牛肉+鸡蛋+花生"
+            android:textColor="@color/black"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥: "
+            android:textColor="@color/Myappcolor"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_order_cost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="15.00"
+            android:textColor="@color/Myappcolor"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_order_des_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="6"
+            android:maxEms="30"
+            android:maxLines="2"
+            android:lineSpacingMultiplier="0.7"
+            android:text="搭配上一点点爱心，一点点热情，最后搭配上一点点天分"
+            android:textColor="@color/black"
+            android:textSize="11dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_btn_order">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:src="@mipmap/ic_shopcar"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="6dp"
+                android:text="加入购物车"
+                android:textColor="@color/white"
+                android:textSize="10dp"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

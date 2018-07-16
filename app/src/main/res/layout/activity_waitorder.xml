@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="你的订单正在等待商家处理"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <ListView
+        android:id="@+id/lv_wait_order"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0_dp"
+        android:layout_weight="1.8"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="@dimen/dimen_280_dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn_order"
+            android:text="取消订单"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>

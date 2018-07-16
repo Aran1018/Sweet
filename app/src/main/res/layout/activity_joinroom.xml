@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_level_bg">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="温馨提示：输入朋友告诉您的房间号和密码，就可以进入房间，与您的好朋友一起点餐了哦！"
+            android:textColor="@color/Myappcolor"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:background="@drawable/selector_line_et_bg"
+                android:hint="请输入房间号"
+                android:inputType="textVisiblePassword"
+                android:paddingBottom="5dp"
+                android:textColorHint="@color/__picker_black_40"
+                android:textSize="15dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/dialog_btn_input_cancle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:background="@drawable/selector_line_et_bg"
+                android:hint="请输入房间密码"
+                android:inputType="textVisiblePassword"
+                android:paddingBottom="5dp"
+                android:textColorHint="@color/__picker_black_40"
+                android:textSize="15dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/dialog_btn_input_cancle" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0_dp"
+        android:layout_weight="1.8"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="@dimen/dimen_280_dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn_order"
+            android:text="取消订单"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

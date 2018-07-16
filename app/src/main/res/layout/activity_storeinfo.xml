@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/codr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            app:contentScrim="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
+            <ImageView
+                android:id="@+id/imv_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80_dp"
+                app:layout_collapseMode="pin"
+                app:title="toolBar" />
+            <FrameLayout
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_roundbtn_bg">
+
+                    <ImageButton
+                        android:id="@+id/ibtn_back"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:onClick="photoBack"
+                        android:background="@drawable/selector_btn_titlebackblack"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/shape_roundbtn_bg"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/shopstar"
+                        android:id="@+id/imb_store_collect"
+                        android:layout_width="13dp"
+                        android:layout_height="16dp"
+                        android:background="@null"
+                        android:layout_gravity="center"
+                        android:onClick="onButtonClick" />
+                </FrameLayout>
+
+
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sc_shop_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:focusable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/tv_shop_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/tv_shop_int"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/gray6"/>
+
+                <LinearLayout
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="营业时间："
+                        android:textColor="@color/gray6"/>
+
+                    <TextView
+                        android:id="@+id/tv_shop_worktime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:textColor="@color/gray6"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人均消费： "
+                        android:textColor="@color/gray6"/>
+
+                    <TextView
+                        android:id="@+id/tv_store_ave"
+                        android:focusable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/gray6"/>
+                </LinearLayout>
+
+                <TextView
+                    android:focusable="false"
+                    android:id="@+id/tv_shop_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/gray6"
+                    />
+
+                <LinearLayout
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="推荐美食："
+                        android:textColor="@color/black"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/tv_moreFood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="180dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="right|center"
+                        android:onClick="onButtonClick"
+                        android:text="查看更多>"
+                        android:textColor="@color/Myappcolor"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imv_show_fir"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imv_show_sec"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imv_show_sed"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:focusable="false"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_evr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="店内环境："
+                        android:textColor="@color/black"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_moreevr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="180dp"
+                        android:gravity="right|center"
+                        android:onClick="onButtonClick"
+                        android:text="查看更多>"
+                        android:textColor="@color/Myappcolor"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imv_shop_one"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imv_shop_two"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imv_shop_three"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="地图"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="2"
+                        android:background="@color/black"/>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.tencent.tencentmap.mapsdk.map.MapView
+                        android:id="@+id/map"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp">
+
+                    </com.tencent.tencentmap.mapsdk.map.MapView>
+
+                    <Button
+                        android:id="@+id/btn_map_position"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="23dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/selector_btn_map"
+                        android:scaleType="fitXY"/>
+
+                    <Button
+                        android:layout_gravity="bottom|left"
+                        android:id="@+id/btn_more_map_detal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="详细信息" />
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="圈子"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="2"
+                        android:background="@color/black"/>
+
+                </LinearLayout>
+
+                <com.lucky.sweet.views.MyListView
+                    android:id="@+id/lv_circle"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/layout_order_content"/>
+
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right|bottom|center_vertical"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="17dp"
+        android:background="@mipmap/btn_order_bg"
+        android:text="预订"
+        android:textColor="@color/white" />
+</RelativeLayout>

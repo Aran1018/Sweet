@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_20_dp"
+    >
+
+    <com.lucky.sweet.views.RectangleView
+        android:id="@+id/imv_shop_more_fir"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/distest"/>
+
+    <com.lucky.sweet.views.RectangleView
+        android:id="@+id/imv_shop_more_sec"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/imv_shop_more_fir"
+        android:src="@mipmap/distest"/>
+
+    <com.lucky.sweet.views.RectangleView
+        android:id="@+id/imv_shop_more_thr"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignBottom="@+id/imv_shop_more_fir"
+        android:layout_alignStart="@+id/imv_shop_more_sec"
+        android:src="@mipmap/distest"
+        />
+
+    <com.lucky.sweet.views.RectangleView
+        android:id="@+id/imv_shop_more_for"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imv_shop_more_fir"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/distest"
+        />
+
+    <com.lucky.sweet.views.RectangleView
+        android:id="@+id/imv_shop_more_fiv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignEnd="@+id/imv_shop_more_fir"
+        android:layout_alignTop="@+id/imv_shop_more_for"
+        android:src="@mipmap/distest"
+        />
+
+    <com.lucky.sweet.views.RectangleView
+        android:id="@+id/imv_shop_more_six"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignStart="@+id/imv_shop_more_thr"
+        android:layout_alignTop="@+id/imv_shop_more_fiv"
+        android:src="@mipmap/distest"
+        />
+</RelativeLayout>

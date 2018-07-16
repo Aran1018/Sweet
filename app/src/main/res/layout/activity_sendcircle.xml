@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray0"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_title"/>
+            <ImageButton
+                android:id="@+id/ibtn_album"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/circle_picture"/>
+        </FrameLayout>
+
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="@color/gray0"/>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="@color/grayDividerDark"/>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center|left"-->
+                <!--android:layout_marginLeft="@dimen/dimen_15_dp"-->
+                <!--android:text="#今日最爱"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="17dp"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="@color/grayDividerDark"/>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/gray0"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/grayDividerDark"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_cycle_corner_white"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rev_share_circle"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:layout_marginLeft="7dp"
+                android:padding="15dp"/>
+            <EditText
+                android:id="@+id/et_description"
+                style="@style/editText"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:gravity="left|top"
+                android:hint="输入内容..."
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:maxLength="30"
+                android:textColor="@color/black"
+                android:textSize="17dp"/>
+            <View
+                android:layout_below="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/gray0"/>
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/ibtn_place"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/et_description"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:background="@mipmap/circle_place"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/et_description"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_toRightOf="@+id/ibtn_place"-->
+                <!--android:background="@drawable/shape_circle_bg"-->
+                <!--android:paddingLeft="8dp"-->
+                <!--android:paddingRight="8dp"-->
+                <!--android:text="101烤羊腿"/>-->
+
+
+
+
+            <!--<ImageButton-->
+                <!--android:layout_width="23dp"-->
+                <!--android:layout_height="23dp"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginBottom="11dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_toRightOf="@+id/ibtn_album"-->
+                <!--android:background="@mipmap/circle_place"/>-->
+
+            <Button
+                android:id="@+id/btn_send_circle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_btn_order"
+                android:text="发布"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

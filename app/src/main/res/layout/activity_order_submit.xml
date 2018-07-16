@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/app_bg"
+    tools:context="com.lucky.sweet.activity.OrderSubmitActivity">
+
+    <include layout="@layout/layout_title"/>
+
+
+    <ImageView
+        android:id="@+id/imv_back"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_view_submitorder"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/sc_view"
+        android:layout_width="match_parent"
+        android:layout_height="405dp"
+        android:layout_below="@+id/imv_back"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="-10dp"
+        android:padding="10dp"
+        app:cardElevation="10dp">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="桌号："
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="101烤羊腿（旅顺南路店）"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shop_name"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_0_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:text=" 名称"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_0_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="数量"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_0_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="价格"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/gray3"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_order_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/gray3"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_now_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="2017.12.18 23:11"
+                        android:textColor="@color/black"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_cos_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/tv_cost_num"
+                        android:layout_alignParentTop="true"
+                        android:text="总消费"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_cost_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_cos_title"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:text="￥"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_seat_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/tv_now_time"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="87dp"
+                        android:layout_marginEnd="35dp"
+                        android:text="8"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v7.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btn_submit_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sc_view"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button_submitorder"
+        android:text="确认付款"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

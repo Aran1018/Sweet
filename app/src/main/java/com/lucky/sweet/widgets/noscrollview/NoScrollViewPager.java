@@ -1,0 +1,42 @@
+package com.lucky.sweet.widgets.noscrollview;
+
+import android.content.Context;
+import android.support.v4.view.ViewPager;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+
+/**
+ * Created by c on 2017/11/22.
+ * (╯°□°）╯︵ ┻━┻ MMP好气啊！
+ * (╯‵□′)╯︵┻━┻ 老子怒掀桌子！
+ * ┻━┻︵╰(‵□′)╯︵┻━┻老子双手掀桌！
+ * ┬─┬﻿ ノ( ゜-゜ノ) 算了，我不生气了！日子还得过老老实实敲吧~
+ */
+
+public class NoScrollViewPager extends ViewPager {
+
+
+    public NoScrollViewPager(Context context) {
+        super(context);
+    }
+
+    public NoScrollViewPager(Context context, AttributeSet attrs) {
+        super(context, attrs);
+
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        return false;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        return false;
+    }
+
+    @Override
+    public void setCurrentItem(int item, boolean smoothScroll) {
+        super.setCurrentItem(item, smoothScroll);
+    }
+}

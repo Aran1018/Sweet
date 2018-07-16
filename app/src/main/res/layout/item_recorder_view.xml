@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/btn_subtract"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_subtract"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/tv_num"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@id/btn_subtract"
+        android:gravity="center"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@id/tv_num"
+        android:background="@drawable/ic_add_black_24dp"/>
+
+
+</RelativeLayout>

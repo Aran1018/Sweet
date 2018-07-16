@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray0"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_title" />
+
+    <include layout="@layout/layout_melist_divider_10" />
+
+
+    <ListView
+            android:id="@+id/lv_likeStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="5dp">
+        </ListView>
+    <TextView
+        android:id="@+id/tv_person_collec_shop_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂时收藏" />
+
+
+</LinearLayout>

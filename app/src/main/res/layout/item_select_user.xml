@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imv_flow_friend"-->
+    <!--android:layout_width="45dp"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:src="@mipmap/test_head"/>-->
+    <com.lucky.sweet.views.CircleImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@mipmap/about_sweet"
+        android:id="@+id/imv_flow_friend"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="25dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_weight="4"
+        android:layout_below="@+id/imv_flow_friend"
+        android:id="@+id/tv_flow_friend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textSize="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btn_in_frinde"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/tv_flow_friend"
+        android:background="@mipmap/add_friend"
+        android:layout_centerHorizontal="true"/>
+</LinearLayout>

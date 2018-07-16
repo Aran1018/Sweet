@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    xmlns:com.lucky.sweet.widgets.ImageViewWatcher.MessagePicturesLayoutandroid="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <!--android:background="@drawable/shape_circle_bg"-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_weight="1.5"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center_horizontal">-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.lucky.sweet.views.CircleImageView
+                    android:id="@+id/imv_head"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/test_head"/>
+
+                <TextView
+                    android:id="@+id/tv_lv"
+                    android:layout_width="35dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="55dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape_concern_bg"
+                    android:gravity="center"
+                    android:text="lv.11"
+                    android:textColor="#AACF25"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="77dp"
+                    android:background="@drawable/shape_greenround"
+                    android:gravity="center"
+                    android:text="+11"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:id="@+id/tv_circle_like_num"/>
+
+                <com.sackcentury.shinebuttonlib.ShineButton
+                    android:id="@+id/po_image3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="40dp"
+                    app:btn_color="@android:color/darker_gray"
+                    app:btn_fill_color="#AACF25"
+                    app:enable_flashing="true"
+                    app:shine_size="40dp"
+                    app:siShape="@mipmap/circle_praise"/>
+            </RelativeLayout>
+
+
+            <!--</LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_circle_person_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="我住隔壁我姓王"
+                            android:textColor="#000"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_circle_send_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="11:20"
+                            android:textColor="#FF646464"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_circle_likenum"
+                        android:layout_width="37dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/shape_concern_greenbg"
+                        android:gravity="center"
+                        android:text="关注"
+                        android:layout_marginTop="3dp"
+                        android:textColor="#AACF25"
+                        android:textSize="12dp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_circle_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="装修很不错，关顾着拍照了哈哈，不过菜品也很好吃的！"
+                    android:textColor="#000"
+                    android:textSize="14dp"/>
+
+                <com.lucky.sweet.widgets.ImageViewWatcher.MessagePicturesLayout
+                    android:id="@+id/l_pictures"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp">
+
+                    <com.lucky.sweet.widgets.ImageViewWatcher.SquareImageView
+                        android:id="@+id/i_picture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginStart="14dp"
+                        android:scaleType="centerCrop"/>
+
+                </com.lucky.sweet.widgets.ImageViewWatcher.MessagePicturesLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@mipmap/circle_place"/>
+
+                    <TextView
+                        android:id="@+id/tv_circle_mername"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="107烤羊腿"
+                        android:textColor="#FF646464"
+                        android:textSize="13dp"/>
+
+                    <ImageButton
+                        android:layout_width="18dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@mipmap/circle_callout"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+</LinearLayout>

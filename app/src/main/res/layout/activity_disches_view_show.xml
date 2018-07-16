@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/product_bg"
+    tools:context="com.lucky.sweet.activity.DischesViewShowActivity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_dishes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:clipChildren="false"
+        android:overScrollMode="never"/>
+
+
+    <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="540dp"
+        android:background="@drawable/selector_cancle"
+        />
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Sweet</string>
+    <string name="title_activity_basic">BasicActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test_storeinfo">华丽的水晶灯投下淡淡的光，使整个餐厅显得优雅而静谧。柔和的萨克斯曲充溢着整个餐厅，如一股无形的烟雾在蔓延着，慢慢地慢慢地占据你的心灵，使你的心再也难以感到紧张和愤怒。玫瑰花散发出阵阵幽香，不浓亦不妖，只是若有若无地改变着你复杂的心情，使你的心湖平静得像一面明镜，没有丝毫的涟漪。彬彬有礼的侍应生，安静的客人，不时地小声说笑，环境宁静而美好....</string>
+
+    <array name="tab_name">
+        <item>首页</item>
+        <item>甜甜圈</item>
+        <item>我的</item>
+    </array>
+    <string name="title_activity_order">OrderActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="scan_text">将二维码/条码放入框内, 即可自动扫描</string>
+
+    <string name="settlement">去结算</string>
+    <string name="shopping_cart">购物车</string>
+    <string name="service_products">服务产品</string>
+    <string name="business">商家</string>
+    <string name="evaluate">评价</string>
+
+    <string name="glide_plus_icon_string">android.resource://</string>
+    <string name="post_delete_tv_d">拖动到此处，进行删除</string>
+    <string name="post_delete_tv_s"> 放开手指，进行删除</string>
+    <string name="title_activity_user_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="hide_down">隐藏</string>
+    <string name="comment_content">输入评论内容</string>
+    <string name="send">发送</string>
+</resources>

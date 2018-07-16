@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.lucky.sweet.views.CircleImageView
+            android:id="@+id/imv_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:onClick="onButtonClick"
+            android:src="@mipmap/test_head"></com.lucky.sweet.views.CircleImageView>
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="38dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="53dp"
+            android:background="@drawable/shape_levelbg_white"
+            android:gravity="center"
+            android:text="lv.11"
+            android:textColor="#AACF25"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imv_head"
+            android:text="我住隔壁我姓王"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_circle_rep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imv_head"
+            android:layout_marginRight="@dimen/dimen_20_dp"
+            android:layout_toRightOf="@id/tv_name"
+            android:text="回复了" />
+
+        <TextView
+            android:id="@+id/tv_circle_rep_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/tv_circle_rep" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_name"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="3dp"
+            android:text="16:38"
+            android:textColor="@color/gray3"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_time"
+            android:layout_below="@id/tv_time"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="光顾着拍照了，不过菜品也很好吃,装修很不错，光顾着拍照了，不过菜品也很好吃"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <com.sackcentury.shinebuttonlib.ShineButton
+            android:id="@+id/po_image1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@android:color/darker_gray"
+            app:allow_random_color="false"
+            app:big_shine_color="#FF6666"
+            app:btn_color="@android:color/darker_gray"
+            app:btn_fill_color="#FF6666"
+            app:click_animation_duration="200"
+            app:enable_flashing="false"
+            app:shine_animation_duration="1500"
+            app:shine_count="15"
+            app:shine_distance_multiple="1.5"
+            app:shine_turn_angle="10"
+            app:siShape="@mipmap/circle_like"
+            app:small_shine_color="#CC9999"
+            app:small_shine_offset_angle="20" />
+
+        <Button
+            android:id="@+id/btn_circlr_repest"
+            android:text="回复！"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray3" />
+
+</LinearLayout>
